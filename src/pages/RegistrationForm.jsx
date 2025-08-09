@@ -1,12 +1,10 @@
-import { useParams } from "react-router-dom";
 import { useState } from "react";
 import '../styles/RegistrationForm.css';
 
 export default function RegisterForm() {
-  const { eventId } = useParams();
   const [form, setForm] = useState({ name: "", email: "", phone: "", terms: false });
   const [errors, setErrors] = useState({});
-  const [message, setMessage] = useState("");
+  const [message, setMessage] =   useState(""); 
   const [loading, setLoading] = useState(false);
 
   const validate = () => {
@@ -52,8 +50,6 @@ export default function RegisterForm() {
     <div className="register-form-container" role="main" aria-label="Event registration form">
       <h2>Register for Event</h2>
       <form onSubmit={handleSubmit} className="register-form" noValidate>
-        {/* inputs and labels (same as before) */}
-        {/* ... */}
         <input
           id="name"
           name="name"
