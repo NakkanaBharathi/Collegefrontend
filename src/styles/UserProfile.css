@@ -1,0 +1,91 @@
+/* UserProfile.css */
+.user-profile-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  animation: fadeIn 1s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-profile-container h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  animation: slideInDown 0.7s ease-in-out;
+}
+
+.user-profile-container p {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin: 10px 0;
+}
+
+.user-section {
+  margin-top: 30px;
+}
+
+.user-section h3 {
+  font-size: 1.5rem;
+  color: #2980b9;
+  margin-bottom: 15px;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.user-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.user-section li {
+  background: #ecf5ff;
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-left: 6px solid #3498db;
+  border-radius: 10px;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease;
+}
+
+.user-section li:hover {
+  background-color: #d6eaff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

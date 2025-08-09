@@ -1,0 +1,36 @@
+.feedback-list {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f4f6fb;
+  border-radius: 12px;
+}
+
+.feedback-card {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #4e73df;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feedback-comment {
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+.feedback-rating {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.no-feedback {
+  font-style: italic;
+  color: #777;
+}

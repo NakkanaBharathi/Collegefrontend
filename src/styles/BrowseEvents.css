@@ -1,0 +1,229 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f9f9fb, #eae6f9); /* Soft gradient */
+  color: #333;
+}
+
+/* Optional container styles */
+.App, .browse-events {
+  min-height: 100vh;
+  background: linear-gradient(to right, #f9f9fb, #eae6f9);
+}
+
+/* Browse Events Section */
+.browse-events {
+  padding: 30px;
+}
+
+/* Heading */
+h2 {
+  font-size: 28px;
+  color: #4a148c; /* Rich purple */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #b39ddb;
+  font-size: 14px;
+  background-color: #f3e5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Action Buttons */
+.apply-btn,
+.clear-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.apply-btn {
+  background: linear-gradient(to right, #8e24aa, #ab47bc);
+  color: white;
+}
+
+.clear-btn {
+  background: linear-gradient(to right, #ba68c8, #ce93d8);
+  color: white;
+}
+
+.apply-btn:hover,
+.clear-btn:hover {
+  opacity: 0.95;
+  transform: scale(1.03);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 8px;
+  border: none;
+  background: #ffe0b2;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tabs .active {
+  background: #ff7043;
+  color: white;
+  box-shadow: 0 0 8px rgba(255, 112, 67, 0.5);
+}
+
+/* Event Cards */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #6a1b9a;
+  box-shadow: 0 4px 18px rgba(106, 27, 154, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(106, 27, 154, 0.3);
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 15px;
+  background-color: #fafafa;
+}
+
+.event-info h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #d84315;
+}
+
+.event-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #f0f0f0;
+  border-radius: 20px;
+  height: 8px;
+  margin: 10px 0;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.registered-text {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Action Buttons inside cards */
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btns button {
+  flex: 1;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.register-btn {
+  background: linear-gradient(to right, #43a047, #66bb6a);
+  color: white;
+}
+
+.register-btn:hover {
+  background: linear-gradient(to right, #2e7d32, #43a047);
+  transform: translateY(-2px);
+}
+
+.details-btn {
+  background: linear-gradient(to right, #0288d1, #03a9f4);
+  color: white;
+}
+
+.details-btn:hover {
+  background: linear-gradient(to right, #01579b, #0288d1);
+  transform: translateY(-2px);
+}
+
+/* No Events */
+.no-events {
+  text-align: center;
+  color: #6a1b9a;
+  font-weight: bold;
+  margin-top: 40px;
+}
+/* Show red text for past events */
+.status-text.past {
+  color: red;
+  font-weight: bold;
+}
+
+/* Optional: red button for past events */
+.register-btn.btn-past {
+  background-color: #ff4d4d;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Optional: grey out full events */
+.register-btn.btn-full {
+  background-color: #aaa;
+  color: white;
+  cursor: not-allowed;
+}

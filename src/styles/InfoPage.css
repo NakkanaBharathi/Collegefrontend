@@ -1,0 +1,37 @@
+/* UserPages.css */
+.settings-container,
+.history-container {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  background: #f4f4f4;
+  border-radius: 12px;
+}
+
+.settings-container h2,
+.history-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.settings-container form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.settings-container button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.settings-container button:hover {
+  background-color: #45a049;
+}

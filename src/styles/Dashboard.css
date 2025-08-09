@@ -1,0 +1,231 @@
+/* General Reset */
+body, h1, h2, h3, p, button {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #222;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  animation: fadeInDown 1s ease;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: white;
+  color: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-section button:hover {
+  background-color: #e0e7ff;
+}
+
+/* Stats Section */
+.stats-section {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #fff;
+  animation: fadeInUp 1s ease;
+}
+
+.stat-card{
+  background-color: #6a11cb;;
+  font-size: 1.5rem;
+  border:1px solid  black;
+  color:#1e293b;
+  padding: 1.2rem;
+  margin: 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  flex: 1 1 200px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+ 
+}
+
+
+/* Featured Events */
+.featured-section {
+  background-color: #eff6ff;
+  padding: 2rem;
+  animation: fadeInUp 1.2s ease;
+}
+
+.featured-section h2 {
+  text-align: center;
+  color: #1d4ed8;
+  margin-bottom: 1.5rem;
+}
+
+.featured-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+}
+
+.event-card h3 {
+  color: #111827;
+}
+
+.event-card p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.event-card button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.event-card button:hover {
+  background-color: #2563eb;
+}
+
+/* Calendar Section */
+.calendar-section {
+  padding: 2rem;
+  background-color: #f1f5f9;
+  text-align: center;
+}
+
+.calendar-placeholder {
+  padding: 2rem;
+  background-color: #e2e8f0;
+  border-radius: 12px;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #22c55e, #16a34a);
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.cta-section button {
+  background-color: white;
+  color: #16a34a;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-section button:hover {
+  background-color: #d1fae5;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}  
+.user-avatar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.avatar-circle {
+  background-color: #4caf50;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.event-card.past-event {
+  border: 2px solid #e74c3c;
+  background-color: #fdecea;
+}
+
+.event-status.past-status {
+  color: red;
+  font-weight: bold;
+}

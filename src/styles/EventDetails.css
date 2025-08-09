@@ -1,0 +1,250 @@
+/* General container */
+.event-details-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.event-details-container {
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.event-details-container h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Event image */
+.event-details-image {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Info box */
+.event-info-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem 3rem;
+  margin-bottom: 2rem;
+}
+
+.event-info-box p {
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 0.9rem 1.2rem;
+  box-shadow: inset 0 0 6px #e2e8f0;
+  font-size: 1rem;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.event-info-box strong {
+  min-width: 75px;
+  color: #4a5568;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Color coding icons */
+.event-info-box p:nth-child(1) strong {
+  color: #2563eb; /* blue */
+}
+
+.event-info-box p:nth-child(2) strong {
+  color: #7c3aed; /* purple */
+}
+
+.event-info-box p:nth-child(3) strong {
+  color: #16a34a; /* green */
+}
+
+.event-info-box p:nth-child(4) strong {
+  color: #ea580c; /* orange */
+}
+
+.event-info-box p:nth-child(5) strong {
+  color: #db2777; /* pink */
+}
+
+/* Description spans full width */
+.event-info-box p:nth-last-child(2),
+.event-info-box p:nth-last-child(1) {
+  grid-column: 1 / -1;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  box-shadow: none;
+}
+
+/* Progress bar container */
+.progress-bar-container {
+  position: relative;
+  background: #e0e7ff;
+  height: 18px;
+  border-radius: 9px;
+  overflow: hidden;
+  margin: 1rem 0 2rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #4f46e5;
+  border-radius: 9px 0 0 9px;
+  transition: width 0.6s ease;
+}
+
+.percentage-label {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #3730a3;
+  font-weight: 600;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.buttons button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 6px 12px rgba(79,70,229,0.4);
+}
+
+.buttons button:hover {
+  background: #4338ca;
+}
+
+/* Feedback section */
+.feedback-section {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  box-shadow: inset 0 0 10px #e2e8f0;
+}
+
+.feedback-section h3 {
+  margin-bottom: 1rem;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.feedback-section label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #334155;
+}
+
+.feedback-section select {
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.feedback-section textarea {
+  width: 100%;
+  min-height: 100px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  resize: vertical;
+  color: #334155;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.feedback-section textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79,70,229,0.5);
+}
+
+.feedback-section button {
+  background: #4f46e5;
+  color: white;
+  padding: 0.75rem 1.6rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  box-shadow: 0 6px 12px rgba(79,70,229,0.4);
+}
+
+.feedback-section button:hover {
+  background: #4338ca;
+}
+
+/* Loading & error messages */
+.loading-text,
+.event-details-error h2 {
+  font-size: 1.5rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.event-details-error {
+  text-align: center;
+}
+
+.event-details-error button {
+  margin-top: 1.5rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 12px rgba(239,68,68,0.4);
+  transition: background 0.3s ease;
+}
+
+.event-details-error button:hover {
+  background: #b91c1c;
+}

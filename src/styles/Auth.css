@@ -1,0 +1,196 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+ background: linear-gradient(to right, #e0f7fa, #e1bee7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Shared container for login & register */
+.auth-container,
+.register-container {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.6s ease-out;
+  margin:5rem auto;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Titles */
+.auth-title,
+.register-container h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Fields */
+.auth-input,
+.register-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.auth-input:focus,
+.register-container input:focus {
+  border-color: #764ba2;
+  outline: none;
+}
+
+/* Buttons */
+.auth-btn,
+.register-btn {
+  width: 100%;
+  background: #764ba2;
+  color: white;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.auth-btn:hover,
+.register-btn:hover {
+  background: #5b3c91;
+}
+
+/* Divider */
+.auth-divider,
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #999;
+  position: relative;
+}
+
+.auth-divider::before,
+.auth-divider::after,
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+}
+
+.auth-divider::before,
+.divider::before {
+  left: 0;
+}
+.auth-divider::after,
+.divider::after {
+  right: 0;
+}
+
+/* Social buttons */
+.auth-social,
+.social-login {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.google {
+  background: #fff;
+  color: #333;
+  border: 2px solid #e5e5e5;
+}
+
+.google:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+.github {
+  background: #333;
+  color: #fff;
+  border: 2px solid #444;
+}
+
+.github:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+/* Icons */
+.auth-icon,
+.icon {
+  font-size: 1.2rem;
+}
+
+/* Link switch */
+.auth-switch {
+  margin-top: 15px;
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.auth-switch a {
+  color: #764ba2;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 480px) {
+  .auth-container,
+  .register-container {
+    padding: 2rem 1rem;
+    border-radius: 15px;
+  }
+}

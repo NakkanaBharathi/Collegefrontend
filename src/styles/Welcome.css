@@ -1,0 +1,170 @@
+/* Welcome.css */
+/* index.css */
+html, body, #root {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  animation: fadeIn 1.2s ease-in;
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+  animation: slideInDown 0.8s ease forwards;
+}
+
+.welcome-subtitle {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  animation: slideInUp 1s ease forwards;
+}
+
+/* Ripple Button */
+.get-started-btn {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  color: #5f2c82;
+  padding: 1rem 2.2rem;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background 0.4s ease;
+}
+
+.get-started-btn:hover {
+  background: #f0e6ff;
+  color: #3e0c5e;
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Ripple animation */
+.get-started-btn::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 1s ease;
+}
+
+.get-started-btn:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Background animation elements */
+.welcome-container::before,
+.welcome-container::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 10s ease-in-out infinite alternate;
+  opacity: 0.2;
+}
+
+.welcome-container::before {
+  width: 300px;
+  height: 300px;
+  background: #ffffff;
+  top: 10%;
+  left: -100px;
+}
+
+.welcome-container::after {
+  width: 400px;
+  height: 400px;
+  background: #ff00cc;
+  bottom: 0;
+  right: -150px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-30px) rotate(20deg);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .welcome-title {
+    font-size: 2.2rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .get-started-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
